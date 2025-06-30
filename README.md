@@ -40,4 +40,4 @@ Ensure images and CSS files are in the correct directory.
 
 🎯 Purpose
 
-This project was made to strengthen front-end development skills and simulate how a real-life charity would present itself online. It reflects personal dedication to meaningful design, real-world use cases, and structural planning. All code and layout decisions were made without reliance on third-party design tools.
+This project was made to strengthen front-end development skills, focusing on HTML and CSS language and simulate how a real-life charity would present itself online. It reflects personal dedication to meaningful design, real-world use cases, and structural planning. All code and layout decisions were made without reliance on third-party design tools.
