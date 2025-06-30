@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="Untitled.png">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+      text-align: center;
+    }
+    .container img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #132664;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .register-link {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .register-link a {
+      color: #4CAF50;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    #register-form {
+      display: none;
+      margin-top: 20px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="Untitled.png" alt="Yayasan Amal Mahabbah Logo">
+    <h2>Welcome</h2>
+    <form id="login-form" action="process-login.php" method="POST">
+      <div class="form-group">
+        <label for="username">Username or Email</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Login</button>
+      <div class="register-link" id="asnaf-register-link" style="display: none;">
+        New Asnaf? <a onclick="showRegisterForm()">Register here</a>
+      </div>
+    </form>
+
+
+    <form id="register-form" action="register-asnaf.php" method="POST">
+      <h3>Asnaf Registration</h3>
+      <div class="form-group">
+        <label for="asnafName">Full Name</label>
+        <input type="text" id="asnafName" name="asnafName" required>
+      </div>
+      <div class="form-group">
+        <label for="asnafEmail">Email</label>
+        <input type="email" id="asnafEmail" name="asnafEmail" required>
+      </div>
+      <div class="form-group">
+        <label for="asnafPhone">Phone Number</label>
+        <input type="text" id="asnafPhone" name="asnafPhone" required>
+      </div>
+      <div class="form-group">
+        <label for="asnafPassword">Password</label>
+        <input type="password" id="asnafPassword" name="asnafPassword" required>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+
+  <script>
+    function checkUserType() {
+      const userType = document.getElementById("userType").value;
+      const registerLink = document.getElementById("asnaf-register-link");
+      const registerForm = document.getElementById("register-form");
+
+
+      if (userType === "asnaf") {
+        registerLink.style.display = "block";
+      } else {
+        registerLink.style.display = "none";
+        registerForm.style.display = "none";
+      }
+    }
+
+
+    function showRegisterForm() {
+      document.getElementById("register-form").style.display = "block";
+    }
+  </script>
+</body>
+</html>
