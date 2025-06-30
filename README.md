@@ -2,6 +2,8 @@
 
 A non responsive front-end website designed to represent Yayasan Amal Mahabbah, a charity organization dedicated to helping underprivileged families around the Klang Valley. This project was built with HTML, CSS, and a focus on user-centered design and accessibility.
 
+View website: https://yayasan-amal-mahabbah.netlify.app/
+
 📝 Description
 
 This project simulates a charity website, showcasing the mission, programs, donation methods, and contact details of Yayasan Amal Mahabbah. It's a front-end build that reflects both design sensibility and structural clarity, crafted entirely without the use of templates or generators.
